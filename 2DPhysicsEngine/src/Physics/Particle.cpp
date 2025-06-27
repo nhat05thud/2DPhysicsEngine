@@ -13,3 +13,7 @@ Particle::~Particle() {
 	std::cout << "Particle destructor called!" << std::endl;
 }
 
+void Particle::Integrate(float dt) {
+	this->velocity += this->acceleration * dt;
+	this->position += this->velocity * dt;
+}
